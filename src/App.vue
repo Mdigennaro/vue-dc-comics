@@ -2,18 +2,21 @@
   <div id="app">
     <Header />
     <Main />
+    <Footer />
   </div>
 </template>
 
 <script>
 import Header from "./components/Header.vue"
 import Main from "./components/Main.vue"
+import Footer from "./components/Footer.vue"
 
 export default {
   name: 'App',
   components: {
     Header,
-    Main
+    Main,
+    Footer
   }
 
 }
@@ -31,6 +34,7 @@ export default {
 
 #app{
   width: 100%;
+  height: 100vh;
   min-width: 1180px;
   font-family: 'Lato', sans-serif;
 

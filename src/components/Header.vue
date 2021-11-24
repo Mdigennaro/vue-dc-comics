@@ -8,16 +8,9 @@
       <div class="menu">
         <nav>
           <ul>
-            <li><a href="#">characters</a></li>
-            <li><a href="#">comics</a></li>
-            <li><a href="#">movies</a></li>
-            <li><a href="#">tv</a></li>
-            <li><a href="#">games</a></li>
-            <li><a href="#">collectibles</a></li>
-            <li><a href="#">videos</a></li>
-            <li><a href="#">fans</a></li>
-            <li><a href="#">news</a></li>
-            <li><a href="#">shop</a></li>
+            <li v-for="(item,index) in links" :key="index">
+              <a :class="{active: item.active}" :href="item.url">{{item.text}}</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -28,7 +21,64 @@
 
 <script>
 export default {
-  name: "Header"
+  name: "Header",
+
+  data(){
+    return {
+      links:[
+        {
+          url: '/',
+          text: 'characters',
+          active: false
+        },
+        {
+          url: '/',
+          text: 'comics',
+          active: false
+        },
+        {
+          url: '/',
+          text: 'movies',
+          active: false
+        },
+        {
+          url: '/',
+          text: 'tv',
+          active: false
+        },
+        {
+          url: '/',
+          text: 'games',
+          active: false
+        },
+        {
+          url: '/',
+          text: 'collectibles',
+          active: false
+        },
+        {
+          url: '/',
+          text: 'videos',
+          active: false
+        },
+        {
+          url: '/',
+          text: 'fans',
+          active: false
+        },
+        {
+          url: '/',
+          text: 'news',
+          active: false
+        },
+        {
+          url: '/',
+          text: 'shop',
+          active: false
+        },
+      ]
+    }
+  }
 }
 </script>
 
@@ -64,8 +114,6 @@ header{
       }
     }
   }
-
-  
 
 }
 

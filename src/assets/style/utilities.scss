@@ -6,3 +6,9 @@
   justify-content: space-between;
   margin: 0 auto;
 }
+
+.clearfix::after{
+  clear: both;
+  display: table;
+  content: "";
+}
