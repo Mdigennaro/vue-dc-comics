@@ -89,6 +89,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import "../assets/style/vars.scss";
+@import "../assets/style/mixins.scss";
 
 footer{
   height: calc(100% - 320px);
@@ -98,8 +100,7 @@ footer{
     height: calc(100% - 90px);
     background-image: url("../assets/img/footer-bg.jpg");
     background-size: cover;
-    display: flex;
-    align-items: center;
+    @include allCenter();
     overflow: hidden;
 
     .ft-left{
@@ -150,25 +151,23 @@ footer{
     width: 100%;
     height: 90px;
     background-color: #303030;
-    display: flex;
-    align-items: center;
+    @include allCenter();
 
     .btn{
       color: white;
       font-size: 13px;
       font-weight: bold;
       text-transform: uppercase;
-      border: 2px solid #0282f9;
+      border: 2px solid $primary-color;
       padding: 10px;
       cursor: pointer;
     }
 
     .social{
-      display: flex;
-      align-items: center;
+      @include allCenter();
 
       h4{
-        color: #0282f9;
+        color: $primary-color;
         text-transform: uppercase;
         margin: 10px;
       }

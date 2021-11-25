@@ -25,6 +25,8 @@ export default {
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 @import "./assets/style/utilities.scss";
+@import "./assets/style/vars.scss";
+@import "./assets/style/mixins.scss";
 
 *{
   margin: 0;

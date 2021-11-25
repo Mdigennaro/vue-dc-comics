@@ -9,7 +9,7 @@
         <nav>
           <ul>
             <li v-for="(item,index) in links" :key="index">
-              <a :class="{active: item.active}" :href="item.url">{{item.text}}</a>
+              <a @click="item.active = !item.active" :class="{active: item.active}" :href="item.url">{{item.text}}</a>
             </li>
           </ul>
         </nav>
@@ -83,6 +83,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import "../assets/style/vars.scss";
+@import "../assets/style/mixins.scss";
 
 header{
 
@@ -96,9 +98,7 @@ header{
 
   nav ul{
     list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include allCenter();
 
     li a{
       margin: 10px;
@@ -109,8 +109,8 @@ header{
       font-weight: bold;
       padding-bottom: 37px;
       &:hover, &.active{
-        color: #0282f9;
-        border-bottom: 4px solid #0282f9;
+        color: $primary-color;
+        border-bottom: 4px solid $primary-color;
       }
     }
   }

@@ -8,6 +8,12 @@
       </div>
     </section>
 
+    <section class="main-center">
+
+      <div class="container-dc"></div>
+
+    </section>
+
     <section class="main-bottom">
       <div class="container">
         <ul>
@@ -31,37 +37,53 @@ export default {
 </script>
 
 <style lang="scss">
+@import "../assets/style/vars.scss";
+@import "../assets/style/mixins.scss";
 
 main{
   .main-top{
     height: 100px;
     background-color: black;
-    display: flex;
-    align-content: center;
+    @include allCenter();
   
     h2{
       font-size: 20px;
       color: white;
       font-weight: bold;
+      cursor:pointer;
     }
+  }
+
+  .main-center{
+    width: 100%;
+    height: 900px;
+    background-image: url(../assets/img/jumbotron.jpg);
+    background-size: cover;
+    position: relative;
+
+    .container-dc{
+      position: absolute;
+      bottom: 0px;
+      width: 100%;
+      height: 62%;
+      background-color: #1c1c1c;
+    }
+
   }
 
   .main-bottom{
     height: 120px;
-    background-color: #0282f9;
-    display: flex;
-    align-content: center;
+    background-color: $primary-color;
+    @include allCenter();
 
     ul{
       width: 100%;
       list-style:none;
-      display: flex;
-      align-items: center;
+      @include allCenter();
       justify-content: space-around;
 
       li a{
-        display: flex;
-        align-items: center;
+        @include allCenter();
         text-decoration: none;
         color: white;
         text-transform: uppercase;
