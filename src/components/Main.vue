@@ -14,9 +14,9 @@
         <div class="container">
           <h3>Current series</h3>
             <div class="box-fumetti">
-              <Fumetto v-for="(fumettoSingolo, index) in listaFumetti" :key="index"
-              :imgFumetto="" 
-              :nomeFumetto="" 
+              <Fumetto v-for="(fumetto, index) in listaFumetti" :key="index"
+              :imgFumetto="fumetto.thumb" 
+              :nomeFumetto="fumetto.series" 
               />
 
             </div>
