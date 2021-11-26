@@ -9,7 +9,7 @@
         <nav>
           <ul>
             <li v-for="(item,index) in links" :key="index">
-              <a @click="item.active = !item.active" :class="{active: item.active}" :href="item.url">{{item.text}}</a>
+              <a @click="item.active == !item.active" :class="{active: item.active}" :href="item.url">{{item.text}}</a>
             </li>
           </ul>
         </nav>

@@ -26,14 +26,14 @@ export default {
 @import "../assets/style/utilities.scss";
 
 .fumetto-singolo{
-  flex-basis: calc(100% / 6);
+  flex-basis: calc(100% / 6 - 10px);
   height: 225px;
   padding: 10px;
 
   .fumetto-cover{
-    height: 150px;
     overflow: hidden;
     margin-bottom: 15px;
+    height: 150px;
     
     img{
       width: 100%;

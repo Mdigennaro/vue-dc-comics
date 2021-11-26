@@ -18,8 +18,8 @@
               :imgFumetto="fumetto.thumb" 
               :nomeFumetto="fumetto.series" 
               />
-
             </div>
+            <div class="btn">Load more</div>
         </div>
       </div>
 
@@ -187,6 +187,16 @@ main{
           justify-content: space-between;
           flex-wrap: wrap;
           
+        }
+
+        .btn{
+          color: white;
+          font-weight: bold;
+          text-transform: uppercase;
+          background-color: $primary-color;
+          padding: 10px 40px;
+          font-size: 14px;
+          cursor: pointer;
         }
 
       }
